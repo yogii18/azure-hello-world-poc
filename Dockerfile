@@ -1,2 +1,5 @@
-FROM nginx:alpine
-COPY . /usr/share/nginx/html
+FROM python:latest
+COPY index.html /
+EXPOSE 8000
+CMD python -m http.server 8000
+
